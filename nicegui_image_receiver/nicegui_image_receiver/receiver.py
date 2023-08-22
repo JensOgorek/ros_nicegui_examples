@@ -29,7 +29,7 @@ class ImageReceiverNode(Node):
                 #create an empty image element
                 self.sub_image = ui.image()
                 #create a button to switch between the images, it calls the switch_image function
-                self.display_switcher = ui.button("Switch image", on_click=lambda: self.switch_image())
+                ui.button("Switch image", on_click=lambda: self.switch_image())
 
     def switch_image(self) -> None:
         #a simple function to tigger the control variable for the image
