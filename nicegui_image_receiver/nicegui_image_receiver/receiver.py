@@ -26,8 +26,8 @@ class ImageReceiverNode(Node):
         with globals.index_client:
             #create a row with a width of 40%
             with ui.row().style('width: 40%;'):
-                #create an empty image element
-                self.sub_image = ui.image()
+                #create an empty interactive_image element
+                self.sub_image = ui.interactive_image()
                 #create a button to switch between the images, it calls the switch_image function
                 ui.button("Switch image", on_click=lambda: self.switch_image())
 
@@ -44,7 +44,7 @@ class ImageReceiverNode(Node):
             #encode the image to base64
             base64_image = self.encode_image_to_base64(image)
             #set the image source to the base64 string to display it
-            self.sub_image.set_source('data:image/png;base64,' + base64_image)
+            self.sub_image.set_source(f'data:image/png;base64,{base64_image}')
         return
 
     def image_callback2(self, msg) -> None:
@@ -55,7 +55,7 @@ class ImageReceiverNode(Node):
             #encode the image to base64
             base64_image = self.encode_image_to_base64(image)
             #set the image source to the base64 string to display it
-            self.sub_image.set_source('data:image/png;base64,' + base64_image)
+            self.sub_image.set_source(f'data:image/png;base64,{base64_image}')
         return
     
     def encode_image_to_base64(self, image) -> None:
