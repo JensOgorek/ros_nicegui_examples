@@ -1,3 +1,6 @@
 [submodule "ros_nicegui_image_example"]
 	path = ros_nicegui_image_example
 	url = git@github.com:zauberzeug/ros_nicegui_image_example.git
+[submodule "ros_nicegui_turtle_sim_joystick"]
+	path = ros_nicegui_turtle_sim_joystick
+	url = git@github.com:zauberzeug/ros_nicegui_turtlesim_joystick.git
